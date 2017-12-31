@@ -1,5 +1,3 @@
-open BsWebapi.Webapi.Dom;
-
 module Error = {
   type t('e) = Js.t('e);
 };

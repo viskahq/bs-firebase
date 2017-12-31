@@ -5,9 +5,7 @@
   "sources": [
     "src"
   ],
-  "bs-dependencies" : [
-    "bs-webapi",
-  ],
+  "bs-dependencies" : [],
   "package-specs": [
     {
       "module": "commonjs",

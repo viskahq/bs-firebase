@@ -11,11 +11,12 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "bs-platform": "^2.0.0",
-    "bs-webapi": "git+https://github.com/viskahq/bs-webapi-incubator.git"
+    "bs-platform": "^2.0.0"
   },
   "dependencies": {
-    "firebase": "^4.4.0"
+    "bsb": "^0.0.1",
+    "firebase": "^4.4.0",
+    "global": "^4.3.2"
   },
   "repository": "git@github.com:viskahq/bs-firebase.git",
   "author": ""
