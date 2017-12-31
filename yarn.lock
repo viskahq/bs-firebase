@@ -49,9 +49,9 @@
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.3.tgz#e94f7e772f40e48a2dc52e57d1df38b28bf98e39"
 
-bsb@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/bsb/-/bsb-0.0.1.tgz#577d3a99afe5f32bcc6786745c333e12338b1b3a"
+bs-platform@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-2.1.0.tgz#63560ff8f7142c9c0631559df1c35590b9f6d8b2"
 
 dom-storage@^2.0.2:
   version "2.0.2"
