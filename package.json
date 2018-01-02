@@ -3,19 +3,20 @@
   "version": "0.1.0",
   "scripts": {
     "clean": "bsb -clean-world",
-    "build": "bsb -make-world",
-    "watch": "bsb -make-world -w"
+    "build": "bsb -make-world -clean-world",
+    "watch": "bsb -make-world -clean-world -w"
   },
   "keywords": [
     "BuckleScript"
   ],
   "license": "MIT",
   "peerDependencies": {
-    "bs-platform": "^2.0.0",
-    "bs-webapi": "git+https://github.com/viskahq/bs-webapi-incubator.git"
+    "bs-platform": "^2.0.0"
   },
   "dependencies": {
-    "firebase": "^4.4.0"
+    "bs-platform": "^2.1.0",
+    "firebase": "^4.4.0",
+    "global": "^4.3.2"
   },
   "repository": "git@github.com:viskahq/bs-firebase.git",
   "author": ""

@@ -1,5 +1,3 @@
-open BsWebapi.Webapi.Dom;
-
 module Error = {
   type t('e) = Js.t('e);
 };
@@ -109,7 +107,7 @@ module Storage = {
     [@bs.send] external path : (t, ~path: string) => t = "";
     [@bs.send]
     external put :
-      (t, ~data: Window.File.t, ~metadata: Js.t('a)=?, unit) => Js.Promise.t(UploadTask.t) =
+      (t, ~data: Js.Array.t(int), ~metadata: Js.t('a)=?, unit) => Js.Promise.t(UploadTask.t) =
       "";
     [@bs.send] external delete : t => Js.Promise.t(unit) = "";
     [@bs.send] external getDownloadURL : t => Js.Promise.t(string) = "";
