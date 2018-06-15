@@ -166,9 +166,6 @@ module Auth = {
     [@bs.send]
     external getIdToken : t => Js.Promise.t(Js.Nullable.t(string)) = "";
   };
-  module Error = {
-    type t;
-  };
   module AuthCredential = {
     type t;
   };
@@ -178,7 +175,7 @@ module Auth = {
     (
       t,
       ~nextOrObserver: Js.Null.t(User.t) => unit,
-      ~error: Error.t => unit=?,
+      ~error: Error.t('e) => unit=?,
       ~completed: unit => unit=?
     ) =>
     unit =
