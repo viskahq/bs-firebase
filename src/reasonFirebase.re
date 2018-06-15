@@ -13,6 +13,7 @@ module Database = {
     [@bs.get] external root : t => t = "";
     [@bs.send] external child : (t, ~path: string) => t = "";
     type cb = DataSnapshot.t => unit;
+    [@bs.send]
     external once :
       (
         t,
