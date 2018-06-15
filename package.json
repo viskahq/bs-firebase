@@ -12,7 +12,7 @@
   "license": "MIT",
   "peerDependencies": {
     "bs-platform": "^2.0.0",
-    "bs-webapi": "git+https://github.com/viskahq/bs-webapi-incubator.git"
+    "bs-webapi": "^0.10.0"
   },
   "dependencies": {
     "firebase": "^4.4.0"
