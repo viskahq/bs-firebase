@@ -5,15 +5,13 @@
   "sources": [
     "src"
   ],
-  "bs-dependencies" : [
-    "bs-webapi",
+  "bs-dependencies": [
+    "bs-webapi"
   ],
-  "package-specs": [
-    {
-      "module": "commonjs",
-      "in-source": true
-    }
-  ],
+  "package-specs": [{
+    "module": "commonjs",
+    "in-source": true
+  }],
   "namespace": true,
   "generate-merlin": true,
   "bsc-flags": ["-bs-super-errors"],
