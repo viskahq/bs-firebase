@@ -178,8 +178,8 @@ module Auth = {
     (
       t,
       ~nextOrObserver: Js.Null.t(User.t) => unit,
-      ~error: Error.t => unit,
-      ~completed: unit => unit
+      ~error: Error.t => unit=?,
+      ~completed: unit => unit=?
     ) =>
     unit =
     "";
