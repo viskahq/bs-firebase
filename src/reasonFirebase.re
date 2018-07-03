@@ -43,6 +43,7 @@ module Database = {
     [@bs.send]
     external push : (t, ~value: 'a=?, ~onComplete: Js.nullable(Error.t('e)) => unit=?, unit) => t =
       "";
+    [@bs.send] external remove : (t) => Js.Promise.t(unit) = "";
   } = Reference
   and DataSnapshot: {
     type t;
