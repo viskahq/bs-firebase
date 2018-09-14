@@ -44,6 +44,13 @@ module Database = {
     external push : (t, ~value: 'a=?, ~onComplete: Js.nullable(Error.t('e)) => unit=?, unit) => t =
       "";
     [@bs.send] external remove : (t) => Js.Promise.t(unit) = "";
+
+    [@bs.send] external limitToLast : (t,int) => Query.t = "";
+    [@bs.send] external limitToFirst : (t,int) => Query.t = "";
+    [@bs.send] external orderByChild : (t,string) => Query.t = "";
+    [@bs.send] external orderByKey : (t) => Query.t = "";
+    [@bs.send] external orderByPriority : (t) => Query.t = "";
+    [@bs.send] external orderByValue : (t) => Query.t = "";
   } = Reference
   and DataSnapshot: {
     type t;
@@ -59,7 +66,40 @@ module Database = {
     [@bs.send] external numChildren : t => int = "numChildren";
     [@bs.send] external toJson : t => Js.Json.t = "toJSON";
     [@bs.send] external val_ : t => Js.Json.t = "val";
-  } = DataSnapshot;
+  } = DataSnapshot
+  and Query: {
+    type t;
+
+    [@bs.get] external ref : t => Reference.t = "";
+
+    [@bs.send]
+    external once :
+      (t, ~eventType: string, ~successCallback: DataSnapshot.t => unit=?, unit) =>
+      Js.Promise.t(DataSnapshot.t) =
+      "";
+    type cb = DataSnapshot.t => unit;
+    [@bs.send]
+    external on :
+      (
+        t,
+        ~eventType: string,
+        ~callback: DataSnapshot.t => unit,
+        ~cancelCallback: Error.t('e) => unit=?,
+        unit
+      ) =>
+      cb =
+      "";
+    [@bs.send]
+    external off : (t, ~eventType: string, ~callback: DataSnapshot.t => unit=?, unit) => unit =
+      "";        
+    
+    [@bs.send] external limitToLast : (t,int) => t = "";
+    [@bs.send] external limitToFirst : (t,int) => t = "";
+    [@bs.send] external orderByChild : (t,string) => t = "";
+    [@bs.send] external orderByKey : (t) => t = "";
+    [@bs.send] external orderByPriority : (t) => t = "";
+    [@bs.send] external orderByValue : (t) => t = "";
+  } = Query;
   module OnDisconnect = {
     type t;
     [@bs.send]
@@ -79,9 +119,6 @@ module Database = {
       "";
   };
   module ThenableReference = {
-    type t;
-  };
-  module Query = {
     type t;
   };
   /*external app : t => App.t = "" [@@bs.get];*/
