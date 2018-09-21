@@ -51,6 +51,9 @@ module Database = {
     [@bs.send] external orderByKey : (t) => Query.t = "";
     [@bs.send] external orderByPriority : (t) => Query.t = "";
     [@bs.send] external orderByValue : (t) => Query.t = "";
+    [@bs.send] external startAt : (t,Js.Json.t) => Query.t = "";
+    [@bs.send] external endAt : (t,Js.Json.t) => Query.t = "";
+    [@bs.send] external equalTo : (t,Js.Json.t) => Query.t = "";
   } = Reference
   and DataSnapshot: {
     type t;
@@ -99,6 +102,9 @@ module Database = {
     [@bs.send] external orderByKey : (t) => t = "";
     [@bs.send] external orderByPriority : (t) => t = "";
     [@bs.send] external orderByValue : (t) => t = "";
+    [@bs.send] external startAt : (t,Js.Json.t) => Query.t = "";
+    [@bs.send] external endAt : (t,Js.Json.t) => Query.t = "";
+    [@bs.send] external equalTo : (t,Js.Json.t) => Query.t = "";
   } = Query;
   module OnDisconnect = {
     type t;
