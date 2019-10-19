@@ -6,14 +6,13 @@ yarn add (git url)
 add to your bsconfig.json
 ```json
   "bs-dependencies": [
-    ...
-	"bs-firebase"
+    "bs-firebase"
   ],
 ```
 
 ## Example
 
-```ocaml
+```reason
 let options =
    {
 	"apiKey": "...",
